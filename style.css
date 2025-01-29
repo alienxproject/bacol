@@ -1,0 +1,72 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    grid-template-rows: repeat(3, 1fr); /* 3 baris */
+    gap: 10px; /* Jarak antar item */
+    max-width: 600px; /* Lebar maksimal grid */
+    margin: 0 auto; /* Pusatkan grid */
+}
+
+.grid-item {
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    border-radius: 15px; /* Rounded square */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    aspect-ratio: 1 / 1; /* Rasio 1:1 */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pastikan gambar tidak terdistorsi */
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2); /* Background blur 75% transparan */
+    backdrop-filter: blur(5px); /* Efek blur */
+    font-size: 0.9rem;
+    text-align: center;
+    box-sizing: border-box;
+    white-space: nowrap; /* Judul tidak wrap */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Judul dipotong dengan ellipsis jika terlalu panjang */
+}
